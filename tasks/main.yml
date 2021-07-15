@@ -1,4 +1,9 @@
 ---
+- name: Ensure unzip is installed
+  package:
+    name: unzip
+    state: present
+  become: true
 
 - name: Download awscliv2 installer.
   unarchive:
